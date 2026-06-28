@@ -1,0 +1,243 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+}
+
+/* Background */
+
+.register-page{
+    width:100%;
+    height:100vh;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+/* Dark Blur */
+
+.overlay{
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+    background:rgba(5,12,25,.55);
+}
+
+/* Glass Card */
+
+.register-card{
+
+    width:430px;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    animation:popup .7s ease;
+
+    text-align:center;
+}
+
+/* Logo */
+
+.logo{
+
+    color:#4FD1C5;
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+    letter-spacing:1px;
+}
+
+.register-card h2{
+
+    color:white;
+
+    margin-bottom:8px;
+
+    font-size:32px;
+}
+
+.subtitle{
+
+    color:#d7d7d7;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+}
+
+/* Inputs */
+
+.register-input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.35s;
+}
+
+.register-input::placeholder{
+
+    color:#d9d9d9;
+}
+
+.register-input:focus{
+
+    outline:none;
+
+    border-color:#4FD1C5;
+
+    background:rgba(255,255,255,.13);
+
+    box-shadow:0 0 18px rgba(79,209,197,.35);
+}
+
+/* Button */
+
+.register-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#4FD1C5;
+
+    color:#132238;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.register-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#67F0E2;
+
+    box-shadow:0 12px 25px rgba(79,209,197,.35);
+}
+
+.register-btn:active{
+
+    transform:scale(.98);
+}
+
+/* Login */
+
+.login-link{
+
+    margin-top:28px;
+
+    color:white;
+
+    font-size:15px;
+}
+
+.login-link span{
+
+    margin-left:6px;
+
+    color:#4FD1C5;
+
+    cursor:pointer;
+
+    font-weight:700;
+}
+
+.login-link span:hover{
+
+    text-decoration:underline;
+}
+
+/* Animation */
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px) scale(.9);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.register-card{
+
+    width:90%;
+
+    padding:35px;
+}
+
+.logo{
+
+    font-size:32px;
+}
+
+.register-card h2{
+
+    font-size:26px;
+}
+
+}

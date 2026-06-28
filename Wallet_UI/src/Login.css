@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.login-root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+  background: #ececf7;
+}
+
+/* LEFT PANEL */
+.login-left {
+  position: relative;
+  flex: 1.1;
+  overflow: hidden;
+}
+
+.login-left-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/public/img_1.jpg");
+  background-size: 50%;
+  background-position: center;
+  transform: scale(1.04);
+  transition: transform 8s ease;
+}
+
+.login-left:hover .login-left-bg {
+  transform: scale(1.0);
+}
+
+.login-left-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(231, 8, 8, 0) 30%,
+    rgba(35, 8, 211, 0.3) 100%
+  );
+}
+
+.login-left-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 40px;
+}
+
+.login-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.login-brand span {
+  color: #5eead4;
+}
+
+.login-left-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(7, 1, 40, 0.55);
+  margin-bottom: 10px;
+}
+
+.login-left-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #490124;
+  line-height: 1.05;
+  margin-bottom: 800px;
+  
+}
+
+.login-left-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.login-left-nav a {
+  font-size: 12px;
+  color: rgba(4, 2, 31, 0.5);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.login-left-nav a:hover {
+  color: #ffffff;
+}
+
+/* RIGHT PANEL */
+.login-right {
+  flex: 0.9;
+ /* background: linear-gradient(135deg, #0F172A, #1E293B); */
+ /* background: linear-gradient(135deg, #2B0F3F, #4A1D66);
+ background: linear-gradient(135deg, #3B0A1B, #5B102A); 
+ background: linear-gradient(135deg, #1A1F36, #2C3E50);*/
+ background: linear-gradient(135deg, #1A1F36, #2B2D42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 56px;
+}
+
+.login-right-inner {
+  width: 100%;
+  max-width: 360px;
+}
+
+.login-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.login-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.login-field {
+  margin-bottom: 20px;
+}
+
+.login-field label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+}
+
+.login-field input {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.login-field input:focus {
+  border-color: #5eead4;
+  background: rgba(94,234,212,0.06);
+}
+
+.login-field input::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background: #5eead4;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.login-btn:hover { background: #bd125c; }
+.login-btn:active { transform: scale(0.98); }
+
+.login-register {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+}
+
+.login-register span {
+  color: #5eead4;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.login-register span:hover { color: #99f6e4; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .login-left { display: none; }
+  .login-right { flex: 1; padding: 40px 28px; }
+}
