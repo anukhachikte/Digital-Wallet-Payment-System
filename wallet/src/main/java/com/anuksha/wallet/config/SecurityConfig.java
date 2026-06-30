@@ -55,7 +55,7 @@ public class SecurityConfig {
         configuration.addAllowedOrigin("http://localhost:5177");
         configuration.addAllowedOrigin("http://localhost:5178");
 
-        configuration.addAllowedMethod("*");
+        configuration.addAllowedMethod("https://digital-wallet-payment-system.vercel.app");
         configuration.addAllowedHeader("*");
 
         UrlBasedCorsConfigurationSource source =
