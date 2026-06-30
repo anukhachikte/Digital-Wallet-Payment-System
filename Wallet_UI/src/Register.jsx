@@ -82,7 +82,7 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:8081/api/users";
+  const API_URL = "https://digital-wallet-payment-system.onrender.com/api/users";
 
   const handleRegister = async () => {
     if (!username || !password || !confirmPassword) {

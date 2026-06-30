@@ -88,7 +88,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:8081/api/users";
+  const API_URL = "https://digital-wallet-payment-system.onrender.com/api/users";
 
   const handleLogin = async () => {
     if (!username || !password) {

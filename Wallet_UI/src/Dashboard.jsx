@@ -150,7 +150,7 @@ function Dashboard() {
   const username = localStorage.getItem("username");
   const userId = localStorage.getItem("userId");
 
-  const API_URL = "http://localhost:8081/api/users";
+  const API_URL ="https://digital-wallet-payment-system.onrender.com/api/users";
 
   const headers = {
     Authorization: `Bearer ${token}`,
